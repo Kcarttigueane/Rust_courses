@@ -96,3 +96,54 @@ cargo run --bin test_client
 - **Multi-client testing** - Bash script simulating 3 concurrent clients
 - **Command testing** - Built-in commands (stats, ping, help)
 - **Log verification** - Check `logs/server.log` for timestamped entries
+
+## TP 7: 🌐 DNS Client/Server System - Network Programming & Protocol Implementation
+
+A complete DNS (Domain Name System) client-server implementation demonstrating network programming and binary protocol handling.
+
+### **Features**
+- **DNS Server** - UDP server listening on port 5353 with RFC 1035 compliance
+- **DNS Client** - Command-line client with timeout and comparison features
+- **Protocol Implementation** - Complete DNS message parsing and serialization
+- **Local Database** - Pre-configured domain records (localhost, google.com, etc.)
+- **Error Handling** - NXDOMAIN, NOTIMP response codes
+- **Performance Testing** - Concurrent client support and response time measurement
+- **Public DNS Comparison** - Compare results with Google, Cloudflare, Quad9
+
+### **Rust Concepts Demonstrated**
+- **Network Programming** - UDP sockets with `tokio::net::UdpSocket`
+- **Binary Protocol** - Byte-level DNS message format implementation
+- **Serialization/Deserialization** - Custom encoding/decoding with `byteorder`
+- **Async Programming** - Tokio async runtime for concurrent client handling
+- **Error Handling** - Custom error types and comprehensive error management
+- **Command-line Interface** - `clap` for argument parsing and user interaction
+- **Bit Manipulation** - DNS header flags and compression pointer handling
+- **Collections** - `HashMap` for DNS record storage and lookup
+- **Pattern Matching** - Enum variants for DNS record types and classes
+- **Memory Management** - Efficient buffer handling and zero-copy operations
+
+### **Usage**
+```bash
+# Start the DNS server
+cargo run --bin dns_server -- --port 5353 --verbose
+
+# Query with DNS client
+cargo run --bin dns_client -- google.com
+cargo run --bin dns_client -- localhost --server 127.0.0.1:5353
+
+# Compare with public DNS servers
+cargo run --bin dns_client -- google.com --compare-with-public
+
+# Test with different query types
+cargo run --bin dns_client -- google.com --query-type A --timeout 3000
+
+# Run comprehensive tests
+./test/test_dns.sh
+```
+
+### **Testing**
+- **Automated test suite** - Complete testing script with performance and concurrency tests
+- **Domain resolution** - Tests for predefined domains and NXDOMAIN responses
+- **Performance measurement** - Response time analysis and concurrent client testing
+- **Protocol validation** - DNS message format compliance and error handling
+- **Public DNS comparison** - Verification against real-world DNS servers

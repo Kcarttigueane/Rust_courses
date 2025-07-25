@@ -1,0 +1,19 @@
+[package]
+name = "dns_client_server"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "dns_server"
+path = "src/bin/dns_server.rs"
+
+[[bin]]
+name = "dns_client"
+path = "src/bin/dns_client.rs"
+
+[dependencies]
+tokio = { version = "1.0", features = ["full"] }
+byteorder = "1.4"
+rand = "0.8"
+clap = { version = "4.0", features = ["derive"] }
+colored = "2.0"

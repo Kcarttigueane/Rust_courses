@@ -1,0 +1,46 @@
+[2025-07-24 16:53:04.871] [SERVER] 🚀 Serveur de journalisation démarré
+[2025-07-24 16:53:04.871] [SERVER] 🎯 Serveur en écoute sur 127.0.0.1:8080
+[2025-07-24 16:53:15.142] [SERVER] ✅ Nouveau client connecté: 024fc40b [127.0.0.1:53828] - Total clients: 1
+[2025-07-24 16:53:15.142] [CLIENT:024fc40b] [127.0.0.1:53828] ping
+[2025-07-24 16:53:15.142] [SERVER] ❌ Client déconnecté: 024fc40b - Clients restants: 0
+[2025-07-24 16:53:15.151] [SERVER] ✅ Nouveau client connecté: a4821bdc [127.0.0.1:53829] - Total clients: 1
+[2025-07-24 16:53:15.670] [SERVER] ✅ Nouveau client connecté: 06cc5589 [127.0.0.1:53830] - Total clients: 2
+[2025-07-24 16:53:16.155] [CLIENT:a4821bdc] [127.0.0.1:53829] Hello from client A!
+[2025-07-24 16:53:16.179] [SERVER] ✅ Nouveau client connecté: e2a6f763 [127.0.0.1:53831] - Total clients: 3
+[2025-07-24 16:53:16.670] [CLIENT:06cc5589] [127.0.0.1:53830] Hello from client B!
+[2025-07-24 16:53:17.181] [CLIENT:e2a6f763] [127.0.0.1:53831] Hello from client C!
+[2025-07-24 16:53:18.170] [CLIENT:a4821bdc] [127.0.0.1:53829] ping
+[2025-07-24 16:53:18.190] [CLIENT:e2a6f763] [127.0.0.1:53831] ping
+[2025-07-24 16:53:19.200] [CLIENT:e2a6f763] [127.0.0.1:53831] This is message 2 from client C
+[2025-07-24 16:53:19.685] [CLIENT:06cc5589] [127.0.0.1:53830] ping
+[2025-07-24 16:53:20.185] [CLIENT:a4821bdc] [127.0.0.1:53829] This is message 2 from client A
+[2025-07-24 16:53:20.218] [CLIENT:e2a6f763] [127.0.0.1:53831] Testing concurrent logging - client C
+[2025-07-24 16:53:21.228] [CLIENT:e2a6f763] [127.0.0.1:53831] help
+[2025-07-24 16:53:22.198] [CLIENT:a4821bdc] [127.0.0.1:53829] Testing concurrent logging - client A
+[2025-07-24 16:53:22.240] [CLIENT:e2a6f763] [127.0.0.1:53831] Final message from client C before disconnect
+[2025-07-24 16:53:22.696] [CLIENT:06cc5589] [127.0.0.1:53830] This is message 2 from client B
+[2025-07-24 16:53:23.251] [CLIENT:e2a6f763] [127.0.0.1:53831] DÉCONNEXION VOLONTAIRE
+[2025-07-24 16:53:23.256] [SERVER] ❌ Client déconnecté: e2a6f763 - Clients restants: 2
+[2025-07-24 16:53:24.208] [CLIENT:a4821bdc] [127.0.0.1:53829] help
+[2025-07-24 16:53:25.708] [CLIENT:06cc5589] [127.0.0.1:53830] Testing concurrent logging - client B
+[2025-07-24 16:53:26.223] [CLIENT:a4821bdc] [127.0.0.1:53829] Final message from client A before disconnect
+[2025-07-24 16:53:28.240] [CLIENT:a4821bdc] [127.0.0.1:53829] DÉCONNEXION VOLONTAIRE
+[2025-07-24 16:53:28.242] [SERVER] ❌ Client déconnecté: a4821bdc - Clients restants: 1
+[2025-07-24 16:53:28.721] [CLIENT:06cc5589] [127.0.0.1:53830] help
+[2025-07-24 16:53:31.736] [CLIENT:06cc5589] [127.0.0.1:53830] Final message from client B before disconnect
+[2025-07-24 16:53:34.749] [CLIENT:06cc5589] [127.0.0.1:53830] DÉCONNEXION VOLONTAIRE
+[2025-07-24 16:53:34.750] [SERVER] ❌ Client déconnecté: 06cc5589 - Clients restants: 0
+[2025-07-24 18:15:22.951] [SERVER] 🚀 Serveur de journalisation démarré
+[2025-07-24 18:15:22.952] [SERVER] 🎯 Serveur en écoute sur 127.0.0.1:8080
+[2025-07-24 18:15:36.509] [SERVER] ✅ Nouveau client connecté: b2c9b8a1 [127.0.0.1:56045] - Total clients: 1
+[2025-07-24 18:15:48.321] [SERVER] ✅ Nouveau client connecté: 609357d1 [127.0.0.1:56046] - Total clients: 2
+[2025-07-24 18:15:56.027] [CLIENT:b2c9b8a1] [127.0.0.1:56045] Hello how are you ?
+[2025-07-24 18:16:12.521] [CLIENT:609357d1] [127.0.0.1:56046] I'm connected to the server !!!
+[2025-07-24 18:16:15.531] [CLIENT:609357d1] [127.0.0.1:56046] fds
+[2025-07-24 18:16:16.180] [CLIENT:609357d1] [127.0.0.1:56046] fdsa
+[2025-07-24 18:16:17.255] [CLIENT:b2c9b8a1] [127.0.0.1:56045] fds
+[2025-07-24 18:16:17.752] [CLIENT:b2c9b8a1] [127.0.0.1:56045] fdsa
+[2025-07-24 18:16:20.309] [CLIENT:609357d1] [127.0.0.1:56046] DÉCONNEXION VOLONTAIRE
+[2025-07-24 18:16:20.309] [SERVER] ❌ Client déconnecté: 609357d1 - Clients restants: 1
+[2025-07-24 18:16:24.548] [CLIENT:b2c9b8a1] [127.0.0.1:56045] DÉCONNEXION VOLONTAIRE
+[2025-07-24 18:16:24.548] [SERVER] ❌ Client déconnecté: b2c9b8a1 - Clients restants: 0
